@@ -3,13 +3,46 @@
 // in the html.
 function updateTime() {
   const currentTime = document.getElementById('currentTime');
-var now = dayjs();
-var formattedTime = now.format('MMM-D h:mm:ss A');
+const now = dayjs();
+let formattedTime = now.format('MMM-D h:mm:ss A');
 currentTime.textContent = formattedTime;
 }
 updateTime();
-
 const updateInterval = setInterval(updateTime, 1000);
+
+
+
+function setTimeClass() {
+  const elements = document.querySelectorAll(".time-block");
+  const now = dayjs();
+    
+
+    elements.forEach(element => {
+      const referenceHour = parseInt(element.dataset.referenceHour);
+      const hour = now.hour();
+      console.log(hour);
+    console.log(referenceHour);
+
+    let className;
+    if (hour > referenceHour) {
+    className = "past";
+    } else if (hour === referenceHour) {
+    className = "present";
+    } else {
+    className = "future";
+  }
+  console.log(className);
+  
+    element.classList.remove("past", "future", "present");
+    element.classList.add(className);
+    console.log(element);
+  });
+  console.log(elements);
+  
+  }
+
+setTimeClass();
+setInterval(setTimeClass, 60000);
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
