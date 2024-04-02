@@ -6,3 +6,7 @@ Deployed app URL:
 
 Timeblocks color coded reletive to the current time
 ![coloredTimeblocks](Assets/Images/Day%20Planner%20Project%201.png)
+
+
+User input saved in local storage
+![localStorage](Assets/Images/Day%20Planner%20Project%202.png)
