@@ -5,4 +5,4 @@ Deployed app URL:
 
 
 Timeblocks color coded reletive to the current time
-![coloredTimeblocks](assets/Images/Day%20Planner%20Project%201.png);
+![coloredTimeblocks](Assets/Images/Day%20Planner%20Project%201.png)
